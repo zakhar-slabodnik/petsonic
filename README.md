@@ -1,0 +1,1 @@
+To start the sccript ./bin/run http://www.petsonic.com/es/perros/snacks-y-huesos-perro output.csv

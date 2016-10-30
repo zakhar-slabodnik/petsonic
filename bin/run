@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "petsonic"
+
+if ARGV.size != 2
+  puts "./run http://www.example.com/ /tmp/output.csv"
+  exit(-1)
+end
+
+url = ARGV[0]
+filename = ARGV[1]
+
+reader = Petsonic::Reader.new(url, filename)
+reader.parse
+reader.store!
